@@ -10,22 +10,23 @@
 
 /*//////////////header///////////*/
 header {
-  display: flex;
-  justify-content: center;
-  height: 70px;
   width: 100%;
-  background-color: rgb(31, 29, 29);
+  height: 350px;
 }
 
-header .header-buttons {
-  margin-top: 10px;
+header nav {
+  background-color: red;
+  height: 50px;
+}
+
+header nav .header-buttons {
   display: flex;
   justify-content: space-between;
   width: 200px;
   height: 50%;
 }
 
-header .header-buttons button {
+header nav .header-buttons button {
   background-color: unset;
   border: none;
   color: white;
@@ -33,13 +34,51 @@ header .header-buttons button {
   font-size: 14px;
 }
 
+header .slideshow-container {
+  height: 300px;
+  position: relative;
+  margin: auto;
+}
+
+header .slideshow-container .mySlides {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: inherit;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+header .slideshow-container .slide1 {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2021/03/Avangard-Dubrovnik.jpg);
+}
+
+header .slideshow-container .slide2 {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2021/03/DJI_0245.jpg);
+}
+
+header .slideshow-container .slide3 {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2019/01/apartment-bed-bedroom-271624.jpg);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*//////////////Main///////////*/
 main {
   height: 500px;
   width: 100%;
 }
 
-/*//////////////Footer///////////*/
+/*/ /////////////Footer///////////*/
 footer {
   display: flex;
   justify-content: center;
