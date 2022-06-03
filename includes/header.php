@@ -7,9 +7,7 @@
     <?php
         if ($page === "home") {
             echo "<link rel='stylesheet' href='css/styles.css'>";
-        } else if ($page === "overOns") {
-            echo "<link rel='stylesheet' href='../css/styles.css'>";
-        } else if ($page === "contact") {   
+        } else {
             echo "<link rel='stylesheet' href='../css/styles.css'>";
         }
     ?>
@@ -19,63 +17,44 @@
 </head>
 <body>  
     <header>
-        <nav>
+        <nav id="nav">
             <div class="navbar">
-                <img src="images/logo.png" alt="">
+                <button onclick="toggleMenu()" class="togglemenu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <img id="logoImg" src="<?php if($page === "home"){echo "images/";} else {echo "../images/";} ?>logo.png" alt="Logo">
                 <div class="header-buttons">
                     <?php
                         // Home
                         if ($page === "home") {
-                            echo "<a href='index.php'><button>Home</button></a>";
-                            echo "<a href='pages/over-ons.php'><button>over ons</button></a>";
-                            echo "<a href='pages/Boeken.php'><button>Boeken</button></a>";
-                            echo "<a href='pages/contact.php'><button>contact</button></a>";
-                            echo "<a href='pages/mijn-account.php'><button>Mijn Account</button></a>";
+                            echo "<a href='index.php'><button class='buttons'>Home</button></a>";
+                            echo "<a href='pages/over-ons.php'><button class='buttons'>over ons</button></a>";
+                            echo "<a href='pages/Boeken.php'><button class='buttons'>Boeken</button></a>";
+                            echo "<a href='pages/contact.php'><button class='buttons'>contact</button></a>";
+                            echo "<a href='pages/mijn-account.php'><button class='buttons'>Mijn Account</button></a>";
 
-                        // Over ons
-                        } else if ($page === "overOns") {
-                            echo "<a href='../index.php'><button>Home</button></a>";
-                            echo "<a href='over-ons.php'><button>over ons</button></a>";
-                            echo "<a href='pages/Boeken.php'><button>Boeken</button></a>";
-                            echo "<a href='pages/contact.php'><button>contact</button></a>";
-                            echo "<a href='pages/mijn-account.php'><button>Mijn Account</button></a>";
+                        // Overige pagina's
+                        } else {
+                            echo "<a href='../index.php'><button class='buttons'>Home</button></a>";
+                            echo "<a href='over-ons.php'><button class='buttons'>over ons</button></a>";
+                            echo "<a href='Boeken.php'><button class='buttons'>Boeken</button></a>";
+                            echo "<a href='contact.php'><button class='buttons'>contact</button></a>";
+                            echo "<a href='mijn-account.php'><button class='buttons'>Mijn Account</button></a>";
 
                         // Boeken 
-                        } else if ($page === "Boeken") {
-                            echo "<a href='../index.php'><button>Home</button></a>";
-                            echo "<a href='over-ons.php'><button>over ons</button></a>";
-                            echo "<a href='boeken.php'><button>Boeken</button></a>";
-                            echo "<a href='pages/contact.php'><button>contact</button></a>";
-                            echo "<a href='pages/mijn-account.php'><button>Mijn Account</button></a>";
-
-                        // Contact
-                        } else if ($page === "contact") {
-                            echo "<a href='../index.php'><button>Home</button></a>";
-                            echo "<a href='over-ons.php'><button>over ons</button></a>";
-                            echo "<a href='pages/boeken.php'><button>Boeken</button></a>";
-                            echo "<a href='contact.php'><button>contact</button></a>";
-                            echo "<a href='pages/mijn-account.php'><button>Mijn Account</button></a>";
-
-                        // Mijn Account 
-                        } else if ($page === "mijnAccount") {
-                            echo "<a href='../index.php'><button>Home</button></a>";
-                            echo "<a href='over-ons.php'><button>over ons</button></a>";
-                            echo "<a href='pages/boeken.php'><button>Boeken</button></a>";
-                            echo "<a href='pages/contact.php'><button>contact</button></a>";
-                            echo "<a href='pages/mijn-account.php'><button>Mijn Account</button></a>";
                         }
                     ?>
                 </div>
                 <div class="socials">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-facebook-square"></i>
                 </div>
             </div>
         </nav>
         <?php
             if ($page === "home") {
-                echo "<div class='tekstInFoto'>";
-                echo    "<div><h2>Boek nu snel je onvergetelijke vakantie bij Suncrouse!!</h2></div>";
+                echo "<div class='tekstInFotoHome'>";
+                echo    "<div><h2>Boek nu snel je onvergetelijke vakantie bij SunCruise!!</h2></div>";
                 echo "</div>";
                 echo "<div class='slideshow-container'>";
 
@@ -83,6 +62,11 @@
                 echo    "<div class='mySlides slide2'></div>";
                 echo    "<div class='mySlides slide3'></div>";
 
+                echo "</div>";
+            } else if ($page === "boeken") {
+                echo "<div class='headerPicture boeken'>";
+                echo    "<div class='fade'></div>";
+                echo    "<div class='tekstInFoto'><h2>Boeken</h2></div>";
                 echo "</div>";
             }
         ?>
