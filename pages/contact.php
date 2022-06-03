@@ -8,15 +8,15 @@ include("../includes/header.php")
             <div class="contact-info">
                 <h3>Suncrouse</h3>
                 <div class="contact-detail">
-                    <i class="fas fa-phone"></i>
+                    <i class="fa fa-phone"></i>
                     <a href="tel:+385 95 9032 127">+385 95 9032 127</a>
                 </div>
                 <div class="contact-detail">
-                    <i class="far fa-envelope"></i>
-                    <a href="mailto:info@ivptravel.com">info@ivptravel.com</a>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@suncrouse.com">info@suncrouse.com</a>
                 </div>
                 <div class="contact-detail">
-                    <i class="fas fa-home"></i>
+                    <i class="fa fa-home"></i>
                     <span>dr. Franje Tuđmana 913, 21217 Kaštel Štafilić, Croatia</span>
                 </div>
             </div>
