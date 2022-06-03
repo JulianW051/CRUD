@@ -11,22 +11,37 @@
 /*//////////////header///////////*/
 header {
   width: 100%;
-  height: 350px;
-}
-
-header nav {
-  background-color: red;
   height: 50px;
 }
 
-header nav .header-buttons {
+header nav {
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
   display: flex;
-  justify-content: space-between;
-  width: 200px;
-  height: 50%;
+  justify-content: center;
 }
 
-header nav .header-buttons button {
+header nav .navbar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .navbar img {
+  width: 75px;
+}
+
+header nav .navbar .header-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+}
+
+header nav .navbar .header-buttons button {
   background-color: unset;
   border: none;
   color: white;
@@ -34,13 +49,21 @@ header nav .header-buttons button {
   font-size: 14px;
 }
 
+header nav .navbar .socials {
+  width: 85px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 header .slideshow-container {
-  height: 300px;
+  height: 350px;
   position: relative;
   margin: auto;
 }
 
 header .slideshow-container .mySlides {
+  display: flex;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -61,7 +84,7 @@ header .slideshow-container .slide2 {
 }
 
 header .slideshow-container .slide3 {
-  background-image: url(https://www.ivptravel.com/wp-content/uploads/2019/01/apartment-bed-bedroom-271624.jpg);
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2019/01/f-s-298401-unsplash.jpg);
 }
 
 @keyframes fade {
@@ -71,6 +94,26 @@ header .slideshow-container .slide3 {
   to {
     opacity: 1;
   }
+}
+
+header .tekstInFoto {
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+header .tekstInFoto div {
+  margin-bottom: 25px;
+  margin-right: 75px;
+  width: 350px;
+}
+
+header .tekstInFoto div h2 {
+  color: white;
 }
 /*//////////////Main///////////*/
 main {
