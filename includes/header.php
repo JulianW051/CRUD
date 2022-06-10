@@ -68,6 +68,21 @@
                 echo    "<div class='fade'></div>";
                 echo    "<div class='tekstInFoto'><h2>Boeken</h2></div>";
                 echo "</div>";
+            } else if ($page === "overOns") {
+                echo "<div class='headerPicture overOns'>";
+                echo    "<div class='fade'></div>";
+                echo    "<div class='tekstInFoto'><h2>Over ons</h2></div>";
+                echo "</div>";
+            } else if ($page === "contact") {
+                echo "<div class='headerPicture contact'>";
+                echo    "<div class='fade'></div>";
+                echo    "<div class='tekstInFoto'><h2>Contact</h2></div>";
+                echo "</div>";
+            } else if ($page === "mijnAccount") {
+                echo "<div class='headerPicture mijnAccount'>";
+                echo    "<div class='fade'></div>";
+                echo    "<div class='tekstInFoto'><h2>Mijn account</h2></div>";
+                echo "</div>";
             }
         ?>
     </header>

@@ -145,12 +145,30 @@ header .headerPicture {
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center -100px;
   width: 100%;
   height: 100%;
   background-attachment: fixed;
   overflow: hidden;
+}
+
+header .boeken {
   background-image: url(https://www.ivptravel.com/wp-content/uploads/2021/03/panorama-copy.jpg);
+  background-position: center -100px;
+}
+
+header .overOns {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2019/02/krka-5-1024x680.jpg);
+  background-position: center center;
+}
+
+header .contact {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2021/03/Labrador-11-1.jpg);
+  background-position: center center;
+}
+
+header .mijnAccount {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2019/02/split-1585463_1920.jpg);
+  background-position: center center;
 }
 
 header .headerPicture .fade {
