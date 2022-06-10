@@ -11,7 +11,7 @@
 /*//////////////header///////////*/
 header {
   width: 100%;
-  height: 50px;
+  height: 400px;
 }
 
 header nav {
@@ -21,12 +21,30 @@ header nav {
   z-index: 100;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 header nav .navbar {
   width: 80%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+header nav .navbar .togglemenu {
+  display: none;
+  width: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: unset;
+  border: none;
+}
+
+header nav .navbar .togglemenu .fa {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
 }
 
 header nav .navbar img {
@@ -37,7 +55,7 @@ header nav .navbar .header-buttons {
   display: flex;
   justify-content: space-between;
   width: 70%;
-  height: 100%;
+  height: 50px;
   align-items: center;
 }
 
@@ -50,14 +68,20 @@ header nav .navbar .header-buttons button {
 }
 
 header nav .navbar .socials {
-  width: 85px;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  width: 50px;
+  justify-content: space-between;
+}
+
+header nav .navbar .socials .fa {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
 }
 
 header .slideshow-container {
-  height: 350px;
+  height: 100%;
   position: relative;
   margin: auto;
 }
@@ -96,7 +120,7 @@ header .slideshow-container .slide3 {
   }
 }
 
-header .tekstInFoto {
+header .tekstInFotoHome {
   position: absolute;
   height: 350px;
   width: 100%;
@@ -106,15 +130,114 @@ header .tekstInFoto {
   align-items: flex-end;
 }
 
-header .tekstInFoto div {
+header .tekstInFotoHome div {
   margin-bottom: 25px;
   margin-right: 75px;
   width: 350px;
 }
 
-header .tekstInFoto div h2 {
+header .tekstInFotoHome div h2 {
   color: white;
 }
+
+header .headerPicture {
+  position: relative;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+header .boeken {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2021/03/panorama-copy.jpg);
+  background-position: center -100px;
+}
+
+header .overOns {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2019/02/krka-5-1024x680.jpg);
+  background-position: center center;
+}
+
+header .contact {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2021/03/Labrador-11-1.jpg);
+  background-position: center center;
+}
+
+header .mijnAccount {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2019/02/split-1585463_1920.jpg);
+  background-position: center center;
+}
+
+header .headerPicture .fade {
+  background-color: #2b2424;
+  opacity: 0.5;
+  height: 400px;
+  width: 100%;
+  z-index: 5;
+  top: 0px;
+  left: 0px;
+  background-image: url();
+}
+
+header .headerPicture .tekstInFoto {
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+header .tekstInFoto h2 {
+  color: white;
+  font-size: 65px;
+}
+
+@media only screen and (max-width: 1050px) {
+  header nav .navbar {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  header .tekstInFotoHome {
+    justify-content: center;
+  }
+
+  header .tekstInFotoHome div {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  header nav .navbar {
+    width: 100%;
+  }
+
+  header nav .navbar .togglemenu {
+    display: flex;
+    margin-left: 10px;
+  }
+
+  header nav .navbar .socials {
+    margin-right: 10px;
+  }
+
+  header nav .navbar .header-buttons {
+    display: none;
+    margin-top: 190px;
+    position: absolute;
+    flex-direction: column;
+    width: 95px;
+    height: 130px;
+    align-items: flex-start;
+    padding-bottom: 5px;
+    padding-left: 10px;
+  }
+}
+
 /*//////////////Main///////////*/
 main {
   width: 100%;
