@@ -7,7 +7,7 @@ include("../includes/header.php")
         <div class="container">
             <h3>Wij zijn Suncrouse</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias impedit itaque doloremque rem vero ipsa cumque deleniti, magni odio?</p>
-            <button>Nu boeken</button>
+            <button><a href="boeken.php">Nu boeken</a></button>
         </div>
     </div>
 </main>

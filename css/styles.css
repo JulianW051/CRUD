@@ -422,7 +422,6 @@ main .over-ons .container p {
 
 main .over-ons .container button {
   background-color: #2372b8;
-  color: white;
   cursor: pointer;
   font-size: 18px;
   font-weight: 400;
@@ -432,4 +431,7 @@ main .over-ons .container button {
 }
 main .over-ons .container button:hover {
   background-color: #1d65a3;
+}
+main .over-ons .container a {
+  color: white;
 }
