@@ -10,82 +10,267 @@
 
 /*//////////////header///////////*/
 header {
-  height: 100px;
   width: 100%;
-  background-color: rgb(31, 29, 29);
+  height: 50px;
 }
 
-/*//////////////Main///////////*/
-main {
-  height: 1000px;
+header nav {
+  height: 75px;
   width: 100%;
-}
-
-/*//////////////Footer///////////*/
-footer {
+  position: fixed;
+  z-index: 100;
   display: flex;
   justify-content: center;
+}
+
+header nav .navbar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .navbar img {
+  width: 75px;
+}
+
+header nav .navbar .header-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+}
+
+header nav .navbar .header-buttons button {
+  background-color: unset;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+header nav .navbar .socials {
+  width: 85px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header .slideshow-container {
+  height: 350px;
+  position: relative;
+  margin: auto;
+}
+
+header .slideshow-container .mySlides {
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   width: 100%;
-  height: 300px;
-  background-color: rgb(31, 29, 29);
+  height: 100%;
+  opacity: 1;
+  visibility: inherit;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+header .slideshow-container .slide1 {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2021/03/Avangard-Dubrovnik.jpg);
+}
+
+header .slideshow-container .slide2 {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2021/03/DJI_0245.jpg);
+}
+
+header .slideshow-container .slide3 {
+  background-image: url(https://www.ivptravel.com/wp-content/uploads/2019/01/f-s-298401-unsplash.jpg);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .tekstInFoto {
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+header .tekstInFoto div {
+  margin-bottom: 25px;
+  margin-right: 75px;
+  width: 350px;
+}
+
+header .tekstInFoto div h2 {
+  color: white;
+}
+/*//////////////Main///////////*/
+main {
+  width: 100%;
+}
+
+/*/ /////////////Footer///////////*/
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 footer .container {
   display: flex;
   justify-content: space-evenly;
-  align-items: end;
-  width: 1300px;
-  height: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 330px;
 }
 
-footer .container .left {
-  width: 300px;
-  height: 100%;
-}
-
+footer .container .left,
 footer .container .middle {
-  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 20%;
+  min-width: 300px;
   height: 100%;
+  margin-top: 50px;
+}
+
+footer .container h3,
+footer .container p,
+footer .container a {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.8;
   color: white;
 }
 
-footer .container .middle p {
-  text-align: center;
-  font-size: 13px;
+footer .container a:hover {
+  transition: 0.3s;
+  color: #337ab7;
 }
 
 footer .container .right {
-  width: 300px;
+  width: 20%;
+  min-width: 300px;
   height: 100%;
+  margin-top: 50px;
 }
 
-footer .container3 {
+footer .bottom {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap-reverse;
-  row-gap: 50px;
-  column-gap: 50px;
-  height: auto;
-  margin-bottom: 40px;
-}
-
-footer .container3 form button {
-  width: 50%;
+  align-items: center;
+  justify-content: center;
   height: 50px;
-  border: none;
-  background-color: rgba(57, 53, 53, 0.726);
+  width: 100%;
+  background-color: rgb(57, 54, 54);
   color: white;
-  border-radius: 5px;
+}
+
+footer .bottom p {
+  text-align: center;
+  font-size: 13px;
+  margin-right: 35%;
+}
+
+footer .bottom a {
+  text-align: center;
+  font-size: 13px;
+  color: white;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+@media only screen and (max-width: 511.2px) {
+  footer .bottom p {
+    margin-right: 20%;
+  }
+}
+
+/*/ /////////////Contact///////////*/
+main .contact .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 500px;
+  column-gap: 50px;
+  row-gap: 100px;
+  margin-top: 100px;
+}
+
+main .contact .container .contact-info {
+  margin-left: 50px;
+}
+
+main .contact .container .contact-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4d5567;
+}
+
+main .contact .container .contact-info .contact-detail,
+main .contact .container .contact-info .contact-detail a {
   font-size: 14px;
+  margin-bottom: 5px;
+  line-height: 1.6em;
+  color: #5d6475;
 }
 
-footer .container3 form button:hover {
-  background-color: rgb(114, 112, 112);
-  cursor: pointer;
+main .contact .container .contact-info .contact-detail a:hover {
+  transition: 0.3s;
+  color: #337ab7;
 }
 
-footer .input-container input,
-footer .input-container textarea,
-footer .input-container label {
+main .contact .container .contact-form {
+  max-width: 658px;
+  margin: 0 50px 0 50px;
+}
+
+main .contact .container .contact-form input,
+main .contact .container .contact-form textarea {
+  color: #8a8f9a;
+  border: 1px solid #e7e9ef;
+  line-height: 1.6em;
+  padding: 2px 13px 0px 13px;
+  margin: 0 0 20px;
+  width: 100%;
+}
+
+main .contact .container .contact-form input {
+  width: 32.8%;
+  height: 50px;
+}
+
+main .contact .container .contact-form .submit {
+  background-color: #2372b8;
   color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 633.6px) {
+  main .contact .container .contact-form input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  main .contact .container .contact-form {
+    margin: 0 20px 0 20px;
+  }
 }
