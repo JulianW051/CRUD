@@ -7,7 +7,7 @@ include("../includes/header.php")
         <div class="column">
             <div class="boekingFilter">
                 <h2>Boek nu je droomvakantie!</h2>
-                <form action="">
+                <form action="boeken-resultaat.php" method="post">
                     <h4>VakantieType</h4>
                     <select id="vakantieType">
                         <option value="C">Cruise</option>
@@ -24,9 +24,9 @@ include("../includes/header.php")
                     </select>
                     <h4>Wanneer?</h4>
                     <input class="wanneer" readonly="readonly" name="wanneer" type="text" class="form-input" placeholder="Geen voorkeur" value="<?php if(isset($_POST['wanneerSubmit'])) {echo $_POST['vertrek'] . " - " . $_POST['terugkomst'];} else {echo "";} ?>">
-                    <h4>Met hoeveel?</h4>
-                    <input name="hoeveel" type="number" class="form-input" placeholder="Aantal personen">
-                    <input type="submit" class="submit" value="Zoeken">
+                    <h4 class="hoeveelTekst">Met hoeveel?</h4>
+                    <input name="hoeveel" type="number" class="form-input hoeveel" placeholder="Aantal personen">
+                    <input type="submit" class="boekenSubmit" value="Zoeken">
                 </form>
                 <div class='innerForm'>
                     <form action="boeken.php" method="post">
@@ -44,6 +44,7 @@ include("../includes/header.php")
                     </form>
                 </div>
             </div>
+        
             <div class="boekingFilterImg">
                 <img src="../images/speed-boat.jpg" alt="Speed boot">
             </div>

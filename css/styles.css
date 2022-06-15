@@ -408,13 +408,13 @@ main .contact .container .contact-form .submit {
 
 .boeken .column {
   width: 80%;
-  margin: 50px 0 50px 0;
   display: flex;
-  height: 500px;
+  margin: 50px 0 50px 0;
   justify-content: space-between;
+  align-items: center;
 }
 
-.boeken .column .boekingFilter {
+.column .boekingFilter {
   padding: 10px;
   width: 45%;
   height: 100%;
@@ -426,12 +426,12 @@ main .contact .container .contact-form .submit {
   justify-content: space-between;
 }
 
-.boeken .column .boekingFilter h2 {
+.column .boekingFilter h2 {
   text-align: center;
   font-size: 35px;
 }
 
-.boeken .column .boekingFilter form {
+.column .boekingFilter form {
   width: 100%;
   height: 85%;
   display: flex;
@@ -439,8 +439,8 @@ main .contact .container .contact-form .submit {
   justify-content: space-evenly;
 }
 
-.boeken .column .boekingFilter form input,
-.boeken .column .boekingFilter form select {
+.column .boekingFilter form input,
+.column .boekingFilter form select {
   color: black;
   border: 1px solid #e7e9ef;
   line-height: 1.6em;
@@ -450,29 +450,25 @@ main .contact .container .contact-form .submit {
   height: 35px;
 }
 
-.boeken .column .boekingFilter form .wanneer {
+.column .boekingFilter form .wanneer {
   cursor: pointer;
 }
 
-.boeken .column .boekingFilter .innerForm {
-  position: absolute;
-  z-index: 2;
+.column .boekingFilter .innerForm {
   background-color: white;
-  border: 2px solid black;
   border-radius: 5px;
   padding: 5px;
   display: none;
   height: 150px;
-  width: 35%;
-  margin-top: 320px;
+  width: 100%;
 }
 
-.boeken .column .boekingFilter .innerForm form {
+.column .boekingFilter .innerForm form {
   width: 100%;
   height: 100%;
 }
 
-.boeken .column .boekingFilter .innerForm div {
+.column .boekingFilter .innerForm div {
   height: 50%;
   width: 100%;
   display: flex;
@@ -480,16 +476,17 @@ main .contact .container .contact-form .submit {
   align-items: center;
 }
 
-.boeken .column .boekingFilter .innerForm div h4 {
+.column .boekingFilter .innerForm div h4 {
   width: 50%;
   text-align: center;
 }
 
-.boeken .column .boekingFilter .innerForm .sumbitDiv {
+.column .boekingFilter .innerForm .sumbitDiv {
   justify-content: center;
 }
 
-.boeken .column .boekingFilter form .submit {
+.column .boekingFilter form .boekenSubmit,
+.column .boekingFilter form .submit {
   background-color: #2372b8;
   color: white;
   cursor: pointer;
@@ -507,4 +504,53 @@ main .contact .container .contact-form .submit {
 
 .boeken .column .boekingFilterImg img {
   width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .boeken .column .boekingFilterImg {
+    display: none;
+  }
+
+  .boeken .column {
+    justify-content: center;
+  }
+
+  .boeken .column .boekingFilter {
+    width: 100%;
+  }
+}
+
+/*//////////////Boeken Resultaat///////////*/
+.boekenResultaat {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boekenResultaat .column {
+  width: 80%;
+  height: 1000px;
+  margin: 50px 0 50px 0;
+  display: flex;
+}
+
+.boekenResultaat .column .zoekFilter {
+  width: 20%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+}
+
+.boekenResultaat .column .zoekFilter .boekingFilterResultaat {
+  width: 100%;
+  height: 400px;
+  position: sticky;
+  top: 80px;
+}
+.boekenResultaat .column .vakanties {
+  width: 80%;
+  height: auto;
+  background-color: blue;
 }

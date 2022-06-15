@@ -79,6 +79,9 @@ function toggleMenu() {
 // Contact formulier
 const wanneer = document.querySelector(".wanneer");
 const innerForm = document.querySelector(".innerForm");
+const hoeveelTekst = document.querySelector(".hoeveelTekst");
+const hoeveel = document.querySelector(".hoeveel");
+const boekenSubmit = document.querySelector(".boekenSubmit");
 
 let openedWanneer = 0;
 
@@ -86,8 +89,14 @@ wanneer.addEventListener("click", () => {
   if (openedWanneer == 0) {
     openedWanneer = 1;
     innerForm.style.display = "block";
+    hoeveelTekst.style.display = "none";
+    hoeveel.style.display = "none";
+    boekenSubmit.style.display = "none";
   } else if (openedWanneer == 1) {
     openedWanneer = 0;
     innerForm.style.display = "none";
+    hoeveelTekst.style.display = "block";
+    hoeveel.style.display = "block";
+    boekenSubmit.style.display = "block";
   }
 });
