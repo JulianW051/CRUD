@@ -76,3 +76,18 @@ function toggleMenu() {
     buttonsDiv.style.display = "none";
   }
 }
+// Contact formulier
+const wanneer = document.querySelector(".wanneer");
+const innerForm = document.querySelector(".innerForm");
+
+let openedWanneer = 0;
+
+wanneer.addEventListener("click", () => {
+  if (openedWanneer == 0) {
+    openedWanneer = 1;
+    innerForm.style.display = "block";
+  } else if (openedWanneer == 1) {
+    openedWanneer = 0;
+    innerForm.style.display = "none";
+  }
+});
