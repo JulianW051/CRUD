@@ -44,7 +44,6 @@ include("../includes/header.php")
                     </form>
                 </div>
             </div>
-        
             <div class="boekingFilterImg">
                 <img src="../images/speed-boat.jpg" alt="Speed boot">
             </div>
