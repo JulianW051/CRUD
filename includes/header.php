@@ -33,7 +33,15 @@
                             echo "<a href='pages/contact.php'><button class='buttons'>contact</button></a>";
                             echo "<a href='pages/mijn-account.php'><button class='buttons'>Mijn Account</button></a>";
 
-                        // Overige pagina's
+                        // gebruiker pagina
+                        } else if ($page == "gebruiker") {
+                            echo "<a href='../index.php'><button class='buttons'>Home</button></a>";
+                            echo "<a href='../pages/over-ons.php'><button class='buttons'>over ons</button></a>";
+                            echo "<a href='../pages/Boeken.php'><button class='buttons'>Boeken</button></a>";
+                            echo "<a href='../pages/contact.php'><button class='buttons'>contact</button></a>";
+                            echo "<a href='../pages/mijn-account.php'><button class='buttons'>Mijn Account</button></a>";
+
+                            // Overige pagina's
                         } else {
                             echo "<a href='../index.php'><button class='buttons'>Home</button></a>";
                             echo "<a href='over-ons.php'><button class='buttons'>over ons</button></a>";
@@ -79,6 +87,11 @@
                 echo    "<div class='tekstInFoto'><h2>Contact</h2></div>";
                 echo "</div>";
             } else if ($page === "mijnAccount") {
+                echo "<div class='headerPicture mijnAccount'>";
+                echo    "<div class='fade'></div>";
+                echo    "<div class='tekstInFoto'><h2>Mijn account</h2></div>";
+                echo "</div>";
+            } else if ($page === "gebruiker") {
                 echo "<div class='headerPicture mijnAccount'>";
                 echo    "<div class='fade'></div>";
                 echo    "<div class='tekstInFoto'><h2>Mijn account</h2></div>";
