@@ -502,3 +502,64 @@ main .over-ons .container button:hover {
 main .over-ons .container a {
   color: white;
 }
+
+/*//////////////Mijn account///////////*/
+main .mijn-account {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 500px;
+  width: 100%;
+  row-gap: 100px;
+}
+
+main .mijn-account .registreer-blok,
+main .mijn-account .login-blok {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  min-width: 350px;
+}
+
+main .mijn-account h3 {
+  margin: 50px 0 30px 0;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+main .mijn-account .registreer-login-form {
+  width: 70%;
+}
+
+main .mijn-account .registreer-login-form input {
+  color: #8a8f9a;
+  border: 1px solid #e7e9ef;
+  line-height: 1.6em;
+  padding: 2px 13px 0px 13px;
+  margin: 0 0 20px;
+  height: 50px;
+  width: 100%;
+}
+
+main .mijn-account .registreer-login-form .submit {
+  background-color: #2372b8;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 716px) {
+  main .mijn-account .registreer-login-form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main .mijn-account .registreer-blok,
+  main .mijn-account .login-blok {
+    width: 70%;
+    min-width: unset;
+  }
+}
