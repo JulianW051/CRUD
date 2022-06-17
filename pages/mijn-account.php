@@ -7,7 +7,7 @@ include("../includes/header.php")
         <div class="registreer-blok">
             <h3>Registreren</h3>
             <div class="registreer-login-form">
-                <form action="">
+                <form action="../actions/registreren.php" method="post">
                     <input name="naam" type="text" class="form-input" placeholder="Naam">
                     <input name="email" type="email" class="form-input" placeholder="Email">
                     <input name="tel" type="tel" class="form-input" placeholder="Telefoon nummer">
