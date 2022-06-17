@@ -76,7 +76,8 @@ function toggleMenu() {
     buttonsDiv.style.display = "none";
   }
 }
-// Contact formulier
+
+// Wanneer formulier
 const wanneer = document.querySelector(".wanneer");
 const innerForm = document.querySelector(".innerForm");
 const hoeveelTekst = document.querySelector(".hoeveelTekst");
@@ -98,5 +99,25 @@ wanneer.addEventListener("click", () => {
     hoeveelTekst.style.display = "block";
     hoeveel.style.display = "block";
     boekenSubmit.style.display = "block";
+  }
+});
+
+//Reviews
+const reviews = document.querySelector(".reviews");
+const review = document.querySelectorAll(".review");
+
+let openedReviews = 0;
+
+reviews.addEventListener("click", () => {
+  if (openedReviews == 0) {
+    openedReviews = 1;
+    review.forEach((review) => {
+      review.style.display = "block";
+    });
+  } else if (openedReviews == 1) {
+    openedReviews = 0;
+    review.forEach((review) => {
+      review.style.display = "none";
+    });
   }
 });

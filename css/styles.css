@@ -530,27 +530,156 @@ main .contact .container .contact-form .submit {
 }
 
 .boekenResultaat .column {
-  width: 80%;
+  width: 90%;
   height: 1000px;
   margin: 50px 0 50px 0;
   display: flex;
+  justify-content: space-between;
 }
 
 .boekenResultaat .column .zoekFilter {
   width: 20%;
   height: 100%;
-  padding: 15px;
   display: flex;
 }
 
 .boekenResultaat .column .zoekFilter .boekingFilterResultaat {
   width: 100%;
-  height: 400px;
+  height: 450px;
   position: sticky;
   top: 80px;
 }
+
 .boekenResultaat .column .vakanties {
-  width: 80%;
+  width: 75%;
   height: auto;
-  background-color: blue;
+}
+
+.boekenResultaat .column .vakanties .vakantie {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px black solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boekenResultaat .column .vakanties .vakantie .img {
+  width: 22.5%;
+  display: flex;
+  align-items: center;
+}
+
+.boekenResultaat .column .vakanties .vakantie .img img {
+  width: 100%;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info {
+  width: 72.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .titelRij {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .titelRij h2 {
+  font-size: 30px;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .titelRij button {
+  background-color: #2372b8;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .reviews {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .reviews .reviewInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .reviews .reviewInfo .fa {
+  font-size: 30px;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .reviews .review {
+  display: none;
+  width: 95%;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: auto;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .reviews .review h4 {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+  .boekenResultaat .column {
+    width: 90%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boekenResultaat .column .zoekFilter {
+    width: 50%;
+  }
+
+  .boekenResultaat .column .zoekFilter .boekingFilterResultaat {
+    height: auto;
+    position: unset;
+    top: 0;
+  }
+
+  .boekenResultaat .column .vakanties {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .boekenResultaat .column .vakanties .vakantie .img {
+    display: none;
+  }
+
+  .boekenResultaat .column .vakanties .vakantie .info {
+    width: 100%;
+  }
+
+  .boekenResultaat .column .zoekFilter {
+    width: 100%;
+  }
 }

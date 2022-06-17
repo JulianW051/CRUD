@@ -46,7 +46,34 @@ include("../includes/header.php")
                     </div>
                 </div>
             </div>
-            <div class="vakanties"></div>
+            <div class="vakanties">
+                <div class="vakantie">
+                    <div class="img">
+                        <img src="../Images/test1.png" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="titelRij">
+                            <h2>Vakantie 1</h2>
+                            <button>Boeken</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eum illo reprehenderit, debitis ad omnis architecto temporibus voluptate sit repudiandae doloribus non. Eum a consequuntur nam consequatur laudantium, illum cupiditate?</p>
+                        <div class="reviews">
+                            <div class="reviewInfo">
+                                <h3>Reviews</h3>
+                                <i class="fa fa-angle-down"></i>
+                            </div>
+                            <div class="review">
+                                <h4>Pieter Jansen</h4>
+                                <p>Ja wat eeen totale kanker vakantie ik kom hier nooit meer terug mijn kinderen zijn verbrand.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vakantie">
+                    <div class="img"></div>
+                    <div class="info"></div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
