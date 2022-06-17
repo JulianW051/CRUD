@@ -19,7 +19,7 @@ include("../includes/header.php")
         <div class="login-blok">
             <h3>Inloggen</h3>
             <div class="registreer-login-form">
-                <form action="">
+                <form action="../actions/login.php" method="post">
                     <input name="email" type="email" class="form-input" placeholder="Email">
                     <input name="wachtwoord" type="password" class="form-input" placeholder="Wachtwoord">
                     <input type="submit" class="submit" value="Inloggen">
