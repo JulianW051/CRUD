@@ -53,6 +53,23 @@ foreach ($result as $result) {
                 ?>
             </table>
         </div>
+        <div class="account-admin blok">
+            <h2>Boekingen</h2>
+            <table>
+                <thead>
+                    <tr> 
+                        <th>User</th>
+                        <th>Cruise</th>
+                        <th>Vlucht</th>
+                        <th>Hotel</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <?php  
+                    include("../includes/boekingen-uitlezen.php")
+                ?>
+            </table>
+        </div>
         <div class="cruises-admin blok">
             <h2>Cruises</h2>
             <a href="menu-toevoegen.php?dataTable=cruises"><button class="maak-vakantie">Cruise Toevoegen</button></a>
@@ -108,23 +125,6 @@ foreach ($result as $result) {
                 </thead>
                 <?php  
                     include("../includes/vluchten-uitlezen.php")
-                ?>
-            </table>
-        </div>
-        <div class="cruises-admin blok">
-            <h2>Boekingen</h2>
-            <table>
-                <thead>
-                    <tr> 
-                        <th>User</th>
-                        <th>Cruise</th>
-                        <th>Vlucht</th>
-                        <th>Hotel</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <?php  
-                    include("../includes/boekingen-uitlezen.php")
                 ?>
             </table>
         </div>

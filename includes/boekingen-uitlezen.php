@@ -44,6 +44,10 @@ $result = $stmt->fetchAll();
             $vlucht = $vluchtResult['naam'];
         }
 
+        if ($result['vluchtID'] == "0") {
+            $vlucht = "none";
+        }
+
         // Hotel
         $sql = "SELECT naam FROM hotels where id =:id";
 
@@ -55,12 +59,16 @@ $result = $stmt->fetchAll();
         foreach ($hotelResult as $hotelResult) {
             $hotel = $hotelResult['naam'];
         }
+
+        if ($result['hotelID'] == "0") {
+            $hotel = "none";
+        }
         
-                echo        "<tr>";
-                echo            "<td>" . $user . "</td>";
-                echo            "<td>" . $cruise . "</td>";
-                echo            "<td>" . $vlucht . "</td>";
-                echo            "<td>" . $hotel . "</td>";
-                echo            "<td><a href='../actions/delete.php?id=" . $result['id'] . "&dataTable=" . $dataTable . "'><button class='delete'>Delete</button></a></td>";
-                echo        "</tr>";   
+        echo        "<tr>";
+        echo            "<td>" . $user . "</td>";
+        echo            "<td>" . $cruise . "</td>";
+        echo            "<td>" . $vlucht . "</td>";
+        echo            "<td>" . $hotel . "</td>";
+        echo            "<td><a href='../actions/delete.php?id=" . $result['id'] . "&dataTable=" . $dataTable . "'><button class='delete'>Delete</button></a></td>";
+        echo        "</tr>";   
     }
