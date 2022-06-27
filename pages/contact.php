@@ -21,7 +21,7 @@ include("../includes/header.php")
                 </div>
             </div>
             <div class="contact-form">
-                <form action="">
+                <form action="../actions/contact.php" method="post">
                     <input name="naam" type="text" class="form-input" placeholder="Naam">
                     <input name="email" type="email" class="form-input" placeholder="Email">
                     <input name="tel" type="tel" class="form-input" placeholder="Telefoon nummer">
