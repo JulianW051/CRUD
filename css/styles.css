@@ -572,6 +572,18 @@ main .mijn-account .registreer-login-form .submit {
   align-items: center;
 }
 
+.boeken .bedankt {
+  height: 200px;
+}
+
+.boeken .bedankt div {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .boeken .column {
   width: 80%;
   display: flex;
