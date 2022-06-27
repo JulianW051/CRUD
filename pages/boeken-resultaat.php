@@ -1,6 +1,10 @@
 <?php
 $page = "boeken";
 include("../includes/header.php");
+
+if (!isset($_POST['vakantieType'])) {
+    header("Location: boeken.php");
+}
 ?>
 <main>
     <div class="boekenResultaat">
@@ -30,14 +34,14 @@ include("../includes/header.php");
                         <input type="submit" class="boekenSubmit" value="Zoeken">
                     </form>
                     <div class='innerForm'>
-                        <form action="boeken-resultaat.php" method="post">
+                        <form class="formulier2" action="boeken-resultaat.php" method="post">
                             <div>
                                 <h4>Vertrek</h4>
                                 <h4>Terugkomst</h4>
                             </div>
                             <div>
-                                <input name="vertrek" type="date">
-                                <input name="terugkomst" type="date">
+                                <input class="inputForm" name="vertrek" type="date">
+                                <input class="inputForm" name="terugkomst" type="date">
                             </div>
                             <div class="sumbitDiv">
                                 <input name="wanneerSubmit" type="submit" class="submit" value="Opslaan">

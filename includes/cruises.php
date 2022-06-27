@@ -17,9 +17,23 @@ if ($stmt->rowCount() == 0) {
     $ietsGevonden = false;
 }
 
+
 foreach ($result as $result){
     $beginWanneerDB = str_replace("-", "",$result['start-periode']);
     $eindWanneerDB = str_replace("-", "",$result['eind-periode']);
+
+    if($_POST['vakantieType'] ==  "C") {
+        $vakantieType = "bedankt.php?vakantieType=C&cruiseID=" . $result['id'] . "";
+    } else if ($_POST['vakantieType'] ==  "CH") {
+        $vakantieType = "hotels.php?vakantieType=CH&cruiseID=" . $result['id'] . "&vaarGebied=" . $_POST['vaarGebied'] . "";
+    } else if ($_POST['vakantieType'] ==  "CV") {
+        $vakantieType = "vluchten.php?vakantieType=CV&cruiseID=" . $result['id'] . "";
+    } else if ($_POST['vakantieType'] ==  "CVH") {
+        $vakantieType = "hotels.php?vakantieType=CVH&cruiseID=" . $result['id'] . "&vaarGebied=" . $_POST['vaarGebied'] . "";
+    }
+    
+
+    $roundendPrice = sprintf('%0.2f', $result['prijs']);
 
     if ($beginWanneer >= $beginWanneerDB && $eindWanneer <= $eindWanneerDB) {
         $ietsGevonden = true;
@@ -34,8 +48,8 @@ foreach ($result as $result){
         echo                    "<h2>" . $result['naam'] . "</h2>";
         echo                "</div>";
         echo                "<div>";
-        echo                    "<h3>€20.00 p.p</h3>";
-        echo                    "<button>Boeken</button>";
+        echo                    "<h3>€" . $roundendPrice . " p.p</h3>";
+        echo                    "<a href='" . $vakantieType . "'><button>Boeken</button></a>";
         echo                "</div>";   
         echo            "</div>";
         echo            "<p>" . $result['beschrijving'] . "</p>";
@@ -61,9 +75,3 @@ foreach ($result as $result){
 if ($ietsGevonden == false) {
     echo "<h2 class='niksGevonden'>We hebben helaas niks kunnen vinden met deze filters</h2>";
 }
-
-if (isset($_POST['vakantieType'])){ 
-    if($_POST['vakantieType'] == "C") {
-        echo "selected='selected'";
-    } 
-} 
