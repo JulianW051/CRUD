@@ -19,11 +19,11 @@ if ($stmt->rowCount() == 0) {
 
 
 foreach ($result as $result){
-    $beginWanneerDB = str_replace("-", "",$result['start-periode']);
-    $eindWanneerDB = str_replace("-", "",$result['eind-periode']);
+    $beginWanneerDB = str_replace("-", "",$result['eerstePeriode']);
+    $eindWanneerDB = str_replace("-", "",$result['eindPeriode']);
 
     if($_POST['vakantieType'] ==  "C") {
-        $vakantieType = "bedankt.php?vakantieType=C&cruiseID=" . $result['id'] . "";
+        $vakantieType = "../actions/plaats-boeking.php?vakantieType=C&cruiseID=" . $result['id'] . "";
     } else if ($_POST['vakantieType'] ==  "CH") {
         $vakantieType = "hotels.php?vakantieType=CH&cruiseID=" . $result['id'] . "&vaarGebied=" . $_POST['vaarGebied'] . "";
     } else if ($_POST['vakantieType'] ==  "CV") {

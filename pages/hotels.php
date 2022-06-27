@@ -27,7 +27,7 @@ if (!isset($_GET['vakantieType'])) {
                     foreach ($result as $result){
 
                         if($_GET['vakantieType'] ==  "CH") {
-                            $vakantieType = "bedankt.php?vakantieType=CH&cruiseID=" . $_GET['cruiseID'] . "&hotelID=" . $result['id'] . "";
+                            $vakantieType = "../actions/plaats-boeking.php?vakantieType=CH&cruiseID=" . $_GET['cruiseID'] . "&hotelID=" . $result['id'] . "";
                         } else if ($_GET['vakantieType'] ==  "CVH") {
                             $vakantieType = "vluchten.php?vakantieType=CVH&cruiseID=" . $_GET['cruiseID'] . "&hotelID=" . $result['id'] . "";
                         }

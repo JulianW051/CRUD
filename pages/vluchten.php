@@ -26,9 +26,9 @@ if (!isset($_GET['vakantieType'])) {
                     foreach ($result as $result){
 
                         if($_GET['vakantieType'] ==  "CV") {
-                            $vakantieType = "bedankt.php?vakantieType=CV&cruiseID=" . $_GET['cruiseID'] . "&vluchtID=" . $result['id'] . "";
+                            $vakantieType = "../actions/plaats-boeking.php?vakantieType=CV&cruiseID=" . $_GET['cruiseID'] . "&vluchtID=" . $result['id'] . "";
                         } else if ($_GET['vakantieType'] ==  "CVH") {
-                            $vakantieType = "bedankt.php?vakantieType=CVH&cruiseID=" . $_GET['cruiseID'] . "&hotelID=" . $_GET['hotelID'] . "&vluchtID=" . $result['id'] . "";
+                            $vakantieType = "../actions/plaats-boeking.php?vakantieType=CVH&cruiseID=" . $_GET['cruiseID'] . "&hotelID=" . $_GET['hotelID'] . "&vluchtID=" . $result['id'] . "";
                         }
 
                         $roundendPrice = sprintf('%0.2f', $result['prijs']);
