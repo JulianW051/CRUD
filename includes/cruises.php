@@ -31,7 +31,6 @@ foreach ($result as $result){
     } else if ($_POST['vakantieType'] ==  "CVH") {
         $vakantieType = "hotels.php?vakantieType=CVH&cruiseID=" . $result['id'] . "&vaarGebied=" . $_POST['vaarGebied'] . "";
     }
-    
 
     $roundendPrice = sprintf('%0.2f', $result['prijs']);
 
@@ -56,13 +55,25 @@ foreach ($result as $result){
         echo            "<div class='reviews'>";
         echo                "<div class='reviewInfo'>";
         echo                    "<h3>Reviews</h3>";
-        echo                    "<button>Schrijf een review</button>";
+        echo                    "<a href='review-schrijven.php?cruiseID=" . $result['id'] . "&user=" . $_SESSION['username'] . "'><button>Schrijf een review</button></a>";
         echo                    "<i class='fa fa-angle-down'></i>";
         echo                "</div>";
-        echo                "<div class='review'>";
-        echo                    "<h4>Pieter Jansen</h4>";
-        echo                    "<p>Ja wat eeen totale kanker vakantie ik kom hier nooit meer terug mijn kinderen zijn verbrand.</p>";
-        echo                "</div>";
+        
+        $sql = "SELECT * FROM reviews WHERE cruiseID = :cruiseID";
+        $stmt = $connect->prepare($sql);
+        $stmt->bindParam(':cruiseID', $result['id']);
+        $stmt->execute();
+        $resultReview = $stmt->fetchAll();
+
+        foreach ($resultReview as $resultReview){
+        
+            echo                "<div class='review'>";
+            echo                    "<h4>" . $resultReview['user'] . "</h4>";
+            echo                    "<p>" . $resultReview['review'] . "</p>";
+            echo                "</div>";
+
+        }
+
         echo            "</div>";
         echo        "</div>";
         echo    "</div>";
