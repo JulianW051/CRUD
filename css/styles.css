@@ -719,6 +719,13 @@ main .mijn-account .registreer-login-form .submit {
 .boekenResultaat .column .vakanties {
   width: 75%;
   height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.boekenResultaat .column .vakanties .niksGevonden {
+  margin: 15px 0 15px 0;
 }
 
 .boekenResultaat .column .vakanties .vakantie {
@@ -734,6 +741,7 @@ main .mijn-account .registreer-login-form .submit {
 
 .boekenResultaat .column .vakanties .vakantie .img {
   width: 22.5%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -759,11 +767,20 @@ main .mijn-account .registreer-login-form .submit {
   margin-bottom: 15px;
 }
 
-.boekenResultaat .column .vakanties .vakantie .info .titelRij h2 {
+.boekenResultaat .column .vakanties .vakantie .info .titelRij div {
+  display: flex;
+  align-items: center;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .titelRij div h2 {
   font-size: 30px;
 }
 
-.boekenResultaat .column .vakanties .vakantie .info .titelRij button {
+.boekenResultaat .column .vakanties .vakantie .info .titelRij div h3 {
+  margin-right: 15px;
+}
+
+.boekenResultaat .column .vakanties .vakantie .info .titelRij div button {
   background-color: #2372b8;
   color: white;
   cursor: pointer;
@@ -776,7 +793,7 @@ main .mijn-account .registreer-login-form .submit {
 
 .boekenResultaat .column .vakanties .vakantie .info .reviews {
   width: 100%;
-  height: auto;
+  height: 44px;
   padding: 5px;
   border-radius: 5px;
   border: 2px solid black;
@@ -785,6 +802,7 @@ main .mijn-account .registreer-login-form .submit {
   align-items: center;
   cursor: pointer;
   margin-top: 25px;
+  overflow: hidden;
 }
 
 .boekenResultaat .column .vakanties .vakantie .info .reviews .reviewInfo {
@@ -793,12 +811,29 @@ main .mijn-account .registreer-login-form .submit {
   width: 100%;
 }
 
+.boekenResultaat
+  .column
+  .vakanties
+  .vakantie
+  .info
+  .reviews
+  .reviewInfo
+  button {
+  background-color: #2372b8;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 5px 0 5px;
+  border: none;
+  border-radius: 5px;
+}
+
 .boekenResultaat .column .vakanties .vakantie .info .reviews .reviewInfo .fa {
   font-size: 30px;
 }
 
 .boekenResultaat .column .vakanties .vakantie .info .reviews .review {
-  display: none;
   width: 95%;
   border: 2px solid black;
   border-radius: 5px;
@@ -825,7 +860,6 @@ main .mijn-account .registreer-login-form .submit {
   }
 
   .boekenResultaat .column .zoekFilter .boekingFilterResultaat {
-    height: auto;
     position: unset;
     top: 0;
   }

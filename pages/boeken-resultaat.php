@@ -1,6 +1,6 @@
 <?php
 $page = "boeken";
-include("../includes/header.php")
+include("../includes/header.php");
 ?>
 <main>
     <div class="boekenResultaat">
@@ -8,29 +8,29 @@ include("../includes/header.php")
             <div class="zoekFilter">
                 <div class="boekingFilter boekingFilterResultaat">
                     <h2>Zoeken</h2>
-                    <form action="boeken-resultaat.php" method="post">
+                    <form class="formulier" action="boeken-resultaat.php" method="post">
                         <h4>VakantieType</h4>
-                        <select id="vakantieType">
-                            <option value="C">Cruise</option>
-                            <option value="CH">Cruise + Hotel</option>
-                            <option value="CV">Cruise + vlucht</option>
-                            <option value="CVH" selected>Cruise + vlucht + hotel</option>
+                        <select name="vakantieType" id="vakantieType">
+                            <option <?php if(isset($_POST['vakantieType'])){ if($_POST['vakantieType'] == "C") {echo "selected='selected'";}} ?> value="C">Cruise</option>
+                            <option <?php if(isset($_POST['vakantieType'])){ if($_POST['vakantieType'] == "CH") {echo "selected='selected'";}} ?> value="CH">Cruise + Hotel</option>
+                            <option <?php if(isset($_POST['vakantieType'])){ if($_POST['vakantieType'] == "CV") {echo "selected='selected'";}} ?> value="CV">Cruise + vlucht</option>
+                            <option <?php if(isset($_POST['vakantieType'])){ if($_POST['vakantieType'] == "CVH") {echo "selected='selected'";}} ?> value="CVH">Cruise + vlucht + hotel</option>
                         </select>
                         <h4>Vaargebied</h4>
-                        <select id="vaargebied">
-                            <option value="NE">Noord Europa</option>
-                            <option value="OE">Oost Europa</option>
-                            <option value="WE">West Europa</option>
-                            <option value="MZ" selected>Middelandse zee</option>
+                        <select name="vaarGebied" id="vaargebied">
+                            <option <?php if(isset($_POST['vaarGebied'])){ if($_POST['vaarGebied'] == "NE") {echo "selected='selected'";}} ?> value="NE">Noord Europa</option>
+                            <option <?php if(isset($_POST['vaarGebied'])){ if($_POST['vaarGebied'] == "OE") {echo "selected='selected'";}} ?>  value="OE">Oost Europa</option>
+                            <option <?php if(isset($_POST['vaarGebied'])){ if($_POST['vaarGebied'] == "WE") {echo "selected='selected'";}} ?> value="WE">West Europa</option>
+                            <option <?php if(isset($_POST['vaarGebied'])){ if($_POST['vaarGebied'] == "MZ") {echo "selected='selected'";}} ?> value="MZ">Middelandse zee</option>
                         </select>
                         <h4>Wanneer?</h4>
-                        <input class="wanneer" readonly="readonly" name="wanneer" type="text" class="form-input" placeholder="Geen voorkeur" value="<?php if(isset($_POST['wanneerSubmit'])) {echo $_POST['vertrek'] . " - " . $_POST['terugkomst'];} else {echo "";} ?>">
+                        <input class="wanneer inputForm" readonly="readonly" name="wanneer" type="text" class="form-input" placeholder="Geen voorkeur" value="<?php if(isset($_POST['wanneerSubmit'])) {echo $_POST['vertrek'] . " - " . $_POST['terugkomst'];} elseif(isset($_POST['wanneer'])) {echo $_POST['wanneer'];} else {echo "";} ?>">
                         <h4 class="hoeveelTekst">Met hoeveel?</h4>
-                        <input name="hoeveel" type="number" class="form-input hoeveel" placeholder="Aantal personen">
+                        <input <?php if(isset($_POST['hoeveel'])){echo "value='" . $_POST['hoeveel'] . "'";} ?> name="hoeveel" type="number" class="form-input hoeveel inputForm" placeholder="Aantal personen">
                         <input type="submit" class="boekenSubmit" value="Zoeken">
                     </form>
                     <div class='innerForm'>
-                        <form action="boeken.php" method="post">
+                        <form action="boeken-resultaat.php" method="post">
                             <div>
                                 <h4>Vertrek</h4>
                                 <h4>Terugkomst</h4>
@@ -47,32 +47,7 @@ include("../includes/header.php")
                 </div>
             </div>
             <div class="vakanties">
-                <div class="vakantie">
-                    <div class="img">
-                        <img src="../Images/test1.png" alt="">
-                    </div>
-                    <div class="info">
-                        <div class="titelRij">
-                            <h2>Vakantie 1</h2>
-                            <button>Boeken</button>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eum illo reprehenderit, debitis ad omnis architecto temporibus voluptate sit repudiandae doloribus non. Eum a consequuntur nam consequatur laudantium, illum cupiditate?</p>
-                        <div class="reviews">
-                            <div class="reviewInfo">
-                                <h3>Reviews</h3>
-                                <i class="fa fa-angle-down"></i>
-                            </div>
-                            <div class="review">
-                                <h4>Pieter Jansen</h4>
-                                <p>Ja wat eeen totale kanker vakantie ik kom hier nooit meer terug mijn kinderen zijn verbrand.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="vakantie">
-                    <div class="img"></div>
-                    <div class="info"></div>
-                </div>
+                <?php include("../includes/cruises.php"); ?>
             </div>
         </div>
     </div>

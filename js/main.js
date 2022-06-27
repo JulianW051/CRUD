@@ -103,21 +103,33 @@ wanneer.addEventListener("click", () => {
 });
 
 //Reviews
-const reviews = document.querySelector(".reviews");
-const review = document.querySelectorAll(".review");
+const reviewsPlaceholder = document.querySelectorAll(".reviews");
 
-let openedReviews = 0;
+reviewsPlaceholder.forEach((reviews) => {
+  reviews.addEventListener("click", () => {
+    if (reviews.style.height != "auto") {
+      reviews.style.height = "auto";
+    } else {
+      reviews.style.height = "44px";
+    }
+  });
+});
 
-reviews.addEventListener("click", () => {
-  if (openedReviews == 0) {
-    openedReviews = 1;
-    review.forEach((review) => {
-      review.style.display = "block";
-    });
-  } else if (openedReviews == 1) {
-    openedReviews = 0;
-    review.forEach((review) => {
-      review.style.display = "none";
+// Check forms
+const form = document.querySelectorAll(".formulier");
+const formInput = document.querySelectorAll(".formulier .inputForm");
+
+for (let q = 0; q < form.length; q++) {
+  if (form[q]) {
+    form[q].addEventListener("submit", (e) => {
+      for (let i = 0; i < formInput.length; i++) {
+        if (formInput[i].value.length == 0) {
+          e.preventDefault();
+          formInput[i].style.border = "2px solid red";
+        } else {
+          formInput[i].style.border = "1px solid black";
+        }
+      }
     });
   }
-});
+}
