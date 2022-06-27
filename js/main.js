@@ -76,7 +76,8 @@ function toggleMenu() {
     buttonsDiv.style.display = "none";
   }
 }
-// Contact formulier
+
+// Wanneer formulier
 const wanneer = document.querySelector(".wanneer");
 const innerForm = document.querySelector(".innerForm");
 const hoeveelTekst = document.querySelector(".hoeveelTekst");
@@ -100,3 +101,53 @@ wanneer.addEventListener("click", () => {
     boekenSubmit.style.display = "block";
   }
 });
+
+//Reviews
+const reviewsPlaceholder = document.querySelectorAll(".reviews");
+
+reviewsPlaceholder.forEach((reviews) => {
+  reviews.addEventListener("click", () => {
+    if (reviews.style.height != "auto") {
+      reviews.style.height = "auto";
+    } else {
+      reviews.style.height = "44px";
+    }
+  });
+});
+
+// Check forms
+const form = document.querySelectorAll(".formulier");
+const formInput = document.querySelectorAll(".formulier .inputForm");
+
+for (let q = 0; q < form.length; q++) {
+  if (form[q]) {
+    form[q].addEventListener("submit", (e) => {
+      for (let i = 0; i < formInput.length; i++) {
+        if (formInput[i].value.length == 0) {
+          e.preventDefault();
+          formInput[i].style.border = "2px solid red";
+        } else {
+          formInput[i].style.border = "1px solid black";
+        }
+      }
+    });
+  }
+}
+
+const secondForm = document.querySelectorAll(".formulier2");
+const secondFormInput = document.querySelectorAll(".formulier2 .inputForm");
+
+for (let q = 0; q < form.length; q++) {
+  if (secondForm[q]) {
+    secondForm[q].addEventListener("submit", (e) => {
+      for (let i = 0; i < secondFormInput.length; i++) {
+        if (secondFormInput[i].value.length == 0) {
+          e.preventDefault();
+          secondFormInput[i].style.border = "2px solid red";
+        } else {
+          secondFormInput[i].style.border = "1px solid black";
+        }
+      }
+    });
+  }
+}
