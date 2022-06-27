@@ -637,6 +637,12 @@ main .personeel .delete {
   cursor: pointer;
   border: none;
 }
+main .personeel .update {
+  background-color: #33b747;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
 main .personeel .maak-personeel {
   background-color: #33b747;
   padding: 10px;
@@ -650,13 +656,39 @@ main .personeel .verwijder-personeel {
   border: none;
 }
 
-main .personeel .contact-admin {
+main .personeel .cruises-admin {
+  width: 70%;
+}
+
+main .menu-toevoegen {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 100%;
+  margin: 100px 0 100px 0;
+}
+
+main .menu-toevoegen form {
   width: 50%;
-  border-top: #e7e9ef 1px;
+}
+
+main .menu-toevoegen form input {
+  color: #8a8f9a;
+  border: 1px solid #e7e9ef;
+  line-height: 1.6em;
+  padding: 2px 13px 0px 13px;
+  margin: 0 0 20px;
+  height: 50px;
+  width: 100%;
+}
+
+main .menu-toevoegen form .submit {
+  background-color: #2372b8;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  padding: 10px;
 }
 
 /*//////////////Boeken///////////*/

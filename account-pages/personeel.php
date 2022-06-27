@@ -53,6 +53,26 @@ foreach ($result as $result) {
                 ?>
             </table>
         </div>
+        <div class="cruises-admin blok">
+            <h2>Cruises</h2>
+            <table>
+                <thead>
+                    <tr> 
+                        <th>Naam</th>
+                        <th>beschrijving</th>
+                        <th>prijs</th>
+                        <th>locatie</th>
+                        <th>start periode</th>
+                        <th>eind periode</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <?php  
+                    include("../includes/cruises-uitlezen.php")
+                ?>
+            </table>
+        </div>
     </div>
 </main> 
 <?php
