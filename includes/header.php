@@ -31,7 +31,7 @@
                             echo "<a href='pages/over-ons.php'><button class='buttons'>over ons</button></a>";
                             echo "<a href='pages/Boeken.php'><button class='buttons'>Boeken</button></a>";
                             echo "<a href='pages/contact.php'><button class='buttons'>contact</button></a>";
-                            echo "<a href='pages/mijn-account.php'><button class='buttons'>Mijn Account</button></a>";
+                            echo "<a href='account-pages/gebruiker.php'><button class='buttons'>Mijn Account</button></a>";
 
                         // gebruiker pagina
                         } else if ($page == "gebruiker") {
@@ -39,7 +39,7 @@
                             echo "<a href='../pages/over-ons.php'><button class='buttons'>over ons</button></a>";
                             echo "<a href='../pages/Boeken.php'><button class='buttons'>Boeken</button></a>";
                             echo "<a href='../pages/contact.php'><button class='buttons'>contact</button></a>";
-                            echo "<a href='../pages/mijn-account.php'><button class='buttons'>Mijn Account</button></a>";
+                            echo "<a href='gebruiker.php'><button class='buttons'>Mijn Account</button></a>";
 
                             // Overige pagina's
                         } else {
@@ -47,7 +47,7 @@
                             echo "<a href='over-ons.php'><button class='buttons'>over ons</button></a>";
                             echo "<a href='Boeken.php'><button class='buttons'>Boeken</button></a>";
                             echo "<a href='contact.php'><button class='buttons'>contact</button></a>";
-                            echo "<a href='mijn-account.php'><button class='buttons'>Mijn Account</button></a>";
+                            echo "<a href='../account-pages/gebruiker.php'><button class='buttons'>Mijn Account</button></a>";
 
                         // Boeken 
                         }
