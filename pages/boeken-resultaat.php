@@ -6,6 +6,8 @@ include("../includes/header.php");
 if (!isset($_POST['vakantieType'])) {
     header("Location: boeken.php");
 }
+
+echo $_POST['vakantieType'];
 ?>
 <main>
     <div class="boekenResultaat">
