@@ -2,7 +2,7 @@
 session_start();
 require_once("../Includes/connector.php");
 
-$sql = "SELECT id, password, username FROM users WHERE email = :email";
+$sql = "SELECT * FROM users WHERE email = :email";
 
 $stmt = $connect->prepare($sql);
 $stmt->bindParam(':email', $_POST['email']);
@@ -14,6 +14,7 @@ if ($stmt->rowCount() > 0) {
         if (password_verify($_POST['wachtwoord'], $result['password'])) {
             $_SESSION['id'] = $result['id'];
             $_SESSION['username'] = $result['username'];
+            $_SESSION['tel'] = $result['tel'];
             $_SESSION['email'] = $_POST['email'];
             header("Location: ../account-pages/gebruiker.php");
             exit();

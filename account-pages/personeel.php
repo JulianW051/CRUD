@@ -46,6 +46,7 @@ foreach ($result as $result) {
                         <th>Personeel</th>
                         <th></th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <?php  

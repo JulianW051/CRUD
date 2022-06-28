@@ -565,9 +565,15 @@ main .mijn-account .registreer-login-form .submit {
 }
 
 /*//////////////Gebruiker///////////*/
+main table {
+  display: block;
+  overflow-x: auto;
+}
+
 main .gebruiker {
   width: 100%;
-  height: 500px;
+  height: auto;
+  margin-bottom: 25px;
 }
 
 main .gebruiker .buttons {
@@ -590,6 +596,142 @@ main .gebruiker button {
   margin-right: 20px;
 }
 
+.panneel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.panneel .column {
+  width: 85%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 25px 0 50px 0;
+}
+
+.panneel .column .boekingen,
+.panneel .column .gegevens {
+  width: 45%;
+  height: auto;
+  padding: 25px;
+  align-items: center;
+}
+
+.panneel .column .boekingen h2,
+.panneel .column .gegevens h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+
+.panneel .column .gegevens form {
+  width: 100%;
+}
+
+.panneel .column .gegevens form input {
+  color: #8a8f9a;
+  border: 1px solid #e7e9ef;
+  line-height: 1.6em;
+  padding: 2px 13px 0px 13px;
+  margin: 0 0 20px;
+  height: 50px;
+  width: 100%;
+}
+
+.panneel .column .gegevens form div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.panneel .column .gegevens form .verander-wachtwoord {
+  background-color: #2372b8;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  padding: 10px;
+}
+
+.panneel .column .gegevens form .submit {
+  background-color: #2372b8;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  padding: 10px;
+}
+
+.panneel .column .boekingen .blok {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.panneel .column .boekingen table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.panneel .column .boekingen table thead tr {
+  background-color: #2372b8;
+  color: #ffffff;
+  text-align: left;
+}
+.panneel .column .boekingen th,
+.panneel .column .boekingen td {
+  padding: 12px 15px;
+}
+.panneel .column .boekingen tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.panneel .column .boekingen tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  color: #2372b8;
+}
+.panneel .column .boekingen tbody tr:last-of-type {
+  border-bottom: 2px solid #2372b8;
+}
+
+.panneel .column .boekingen .delete {
+  background-color: #b73333;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  .panneel .column {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .panneel .column .boekingen,
+  .panneel .column .gegevens {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  main .gebruiker .buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    row-gap: 10px;
+  }
+
+  .panneel .column {
+    width: 100%;
+  }
+}
 /*//////////////Personeel///////////*/
 main .personeel {
   display: flex;
@@ -648,6 +790,13 @@ main .personeel .maak-vakantie {
 main .personeel .verwijder-personeel,
 main .personeel .delete {
   background-color: #b73333;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+main .personeel .verander-wachtwoord {
+  background-color: blue;
   padding: 10px;
   cursor: pointer;
   border: none;
