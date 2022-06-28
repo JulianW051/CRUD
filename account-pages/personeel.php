@@ -53,8 +53,26 @@ foreach ($result as $result) {
                 ?>
             </table>
         </div>
+        <div class="account-admin blok">
+            <h2>Boekingen</h2>
+            <table>
+                <thead>
+                    <tr> 
+                        <th>User</th>
+                        <th>Cruise</th>
+                        <th>Vlucht</th>
+                        <th>Hotel</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <?php  
+                    include("../includes/boekingen-uitlezen.php")
+                ?>
+            </table>
+        </div>
         <div class="cruises-admin blok">
             <h2>Cruises</h2>
+            <a href="menu-toevoegen.php?dataTable=cruises"><button class="maak-vakantie">Cruise Toevoegen</button></a>
             <table>
                 <thead>
                     <tr> 
@@ -70,6 +88,43 @@ foreach ($result as $result) {
                 </thead>
                 <?php  
                     include("../includes/cruises-uitlezen.php")
+                ?>
+            </table>
+        </div>
+        <div class="cruises-admin blok">
+            <h2>Hotels</h2>
+            <a href="menu-toevoegen.php?dataTable=hotels"><button class="maak-vakantie">Hotels Toevoegen</button></a>
+            <table>
+                <thead>
+                    <tr> 
+                        <th>Naam</th>
+                        <th>beschrijving</th>
+                        <th>prijs</th>
+                        <th>locatie</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <?php  
+                    include("../includes/hotels-uitlezen.php")
+                ?>
+            </table>
+        </div>
+        <div class="cruises-admin blok">
+            <h2>Vluchten</h2>
+            <a href="menu-toevoegen.php?dataTable=vluchten"><button class="maak-vakantie">Vluchten Toevoegen</button></a>
+            <table>
+                <thead>
+                    <tr> 
+                        <th>Naam</th>
+                        <th>beschrijving</th>
+                        <th>prijs</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <?php  
+                    include("../includes/vluchten-uitlezen.php")
                 ?>
             </table>
         </div>

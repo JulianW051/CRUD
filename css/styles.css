@@ -631,25 +631,22 @@ main .personeel tbody tr:nth-of-type(even) {
 main .personeel tbody tr:last-of-type {
   border-bottom: 2px solid #2372b8;
 }
+
+main .personeel .update,
+main .personeel .maak-personeel,
+main .personeel .maak-vakantie {
+  background-color: #33b747;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+main .personeel .maak-vakantie {
+  margin-top: 10px;
+}
+
+main .personeel .verwijder-personeel,
 main .personeel .delete {
-  background-color: #b73333;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-}
-main .personeel .update {
-  background-color: #33b747;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-}
-main .personeel .maak-personeel {
-  background-color: #33b747;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-}
-main .personeel .verwijder-personeel {
   background-color: #b73333;
   padding: 10px;
   cursor: pointer;
@@ -671,7 +668,8 @@ main .menu-toevoegen form {
   width: 50%;
 }
 
-main .menu-toevoegen form input {
+main .menu-toevoegen form input,
+main .menu-toevoegen form select {
   color: #8a8f9a;
   border: 1px solid #e7e9ef;
   line-height: 1.6em;

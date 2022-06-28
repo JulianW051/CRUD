@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = "boeken";
 include("../includes/header.php");
 
