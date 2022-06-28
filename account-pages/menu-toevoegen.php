@@ -33,6 +33,8 @@ include("../includes/header.php");
 
                 ?>
                 
+                <label>Image link</label>
+                <input value="<?php if(isset($_GET['img'])){echo $_GET['img'];} ?>" type="text" name="img" required=""/>
                 <button class="submit" name="itemSubmit" type="submit">Voeg item toe</button>
         </form>
     </div>

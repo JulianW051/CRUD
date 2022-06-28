@@ -14,6 +14,7 @@ $result = $stmt->fetchAll();
                 echo            "<td>" . $result['Personeel'] . "</td>";
                 echo            "<td><a href='../actions/add-personeel.php?id=" . $result['id'] . "'><button class='maak-personeel'>Maak personeel</button></a></td>";
                 echo            "<td><a href='../actions/rem-personeel.php?id=" . $result['id'] . "'><button class='verwijder-personeel'>Verwijder personeel</button></a></td>";
+                echo            "<td><a href='../account-pages/verander-wachtwoord-form.php?id=" . $result['id'] . "'><button class='verander-wachtwoord'>Verander wachtwoord</button></a></td>";
                 echo        "</tr>";   
                 echo    "</tbody>";
     }
